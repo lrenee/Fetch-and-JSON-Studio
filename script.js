@@ -4,9 +4,13 @@ window.addEventListener("load", function(){
     fetch("https://handlers.education.launchcode.org/static/astronauts.json").then (function (response) {
       response.json().then(function(json) {
         let jsonSort = [];
-  //  while (json.length > 0) {
-          console.log(json[indexOf(Math.max(json.hoursInSpace))]);
-        //   jsonSort.push(json.splice(json[indexOf(Math.max(json.hoursInSpace))]));
+        
+        for (let i = 0; i < json.length; i++) {
+
+        
+        console.log(Math.max(json.hoursInSpace));
+          console.log(json[json.indexOf(Math.max(json.hoursInSpace))]);
+        //   jsonSort.push(json.splice(json[json.indexOf(Math.max(json.hoursInSpace))]));
         // }
         console.log(jsonSort);
         const div = document.getElementById("container");
